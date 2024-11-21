@@ -1,0 +1,23 @@
+.survey-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .survey-form label {
+    font-weight: bold;
+  }
+  .survey-form input, .survey-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .survey-form button {
+    align-self: flex-end;
+  }
+  small {
+    color: green;
+  }
+  

@@ -1,0 +1,33 @@
+<form [formGroup]="surveyForm" (ngSubmit)="onSubmit()" class="survey-form">
+  <div>
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name" />
+    <small *ngIf="surveyForm.controls['name'].invalid && surveyForm.controls['name'].touched">
+      Name is required.
+    </small>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" />
+    <small *ngIf="surveyForm.controls['email'].invalid && surveyForm.controls['email'].touched">
+      Valid email is required.
+    </small>
+  </div>
+  <div>
+    <label for="age">Age:</label>
+    <input id="age" type="number" formControlName="age" />
+    <small *ngIf="surveyForm.controls['age'].invalid && surveyForm.controls['age'].touched">
+      Age is required.
+    </small>
+  </div>
+  <div>
+    <label for="feedback">Feedback:</label>
+    <textarea id="feedback" formControlName="feedback"></textarea>
+    <small *ngIf="surveyForm.controls['feedback'].invalid && surveyForm.controls['feedback'].touched">
+      Feedback is required.
+    </small>
+  </div>
+  <button type="submit" [disabled]="surveyForm.invalid">Submit</button>
+</form>
+
+  
